@@ -13,7 +13,7 @@ if "project_id" not in st.session_state:
 #project = Project(project_name)
 #project = syn.store(project)
 #st.session_state.project_id = project.id
-st.success(st.session_state.project_id)
+st.title("Project")
 entity = syn.get(st.session_state.project_id)
 st.success(entity)
 
