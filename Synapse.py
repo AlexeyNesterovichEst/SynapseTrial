@@ -4,3 +4,5 @@ token = "eyJ0eXAiOiJKV1QiLCJraWQiOiJXN05OOldMSlQ6SjVSSzpMN1RMOlQ3TDc6M1ZYNjpKRU9
 
 import synapseclient
 syn = synapseclient.login(authToken=token)
+profile = syn.getUserProfile()
+st.success(profile)
