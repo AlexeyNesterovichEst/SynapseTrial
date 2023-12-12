@@ -16,8 +16,3 @@ if "project_id" not in st.session_state:
 st.header("Project")
 entity = syn.get(st.session_state.project_id)
 st.success(entity)
-
-#upload file
-# vizualize file
-# function to create file
-# function to look at file
