@@ -9,7 +9,7 @@ profile = syn.getUserProfile()
 if "project_id" not in st.session_state:
   st.session_state.project_id = ""
 
-project_name = 'MySynapseStreamlitTwo'
+project_name = 'MySynapseStreamlit3'
 project = Project(project_name)
 project = syn.store(project)
 st.success(type(project.id))
