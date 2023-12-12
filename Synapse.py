@@ -6,9 +6,14 @@ db_token = st.secrets["DB_TOKEN"]
 syn = synapseclient.login(authToken=db_token)
 profile = syn.getUserProfile()
 
-project_name = 'MySynapseStreamlitOne'
+if "project_id" not in st.session_state:
+  st.session_state.project_id = ""
+
+project_name = 'MySynapseStreamlitTwo'
 project = Project(project_name)
 project = syn.store(project)
-st.success(project)
-entity = syn.get(project_name)
+st.success(type(project.id))
+st.session_state.project_id = project_id
+st.success(st.session_state.project_id )
+entity = syn.get(st.session_state.project_id)
 st.success(entity)
