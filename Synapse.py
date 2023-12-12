@@ -9,11 +9,15 @@ profile = syn.getUserProfile()
 if "project_id" not in st.session_state:
   st.session_state.project_id = ""
 
-project_name = 'MySynapseStreamlit4'
-project = Project(project_name)
-project = syn.store(project)
-st.success(type(project.id))
+#project_name = 'MySynapseStreamlit4'
+#project = Project(project_name)
+#project = syn.store(project)
 st.session_state.project_id = project.id
-st.success(st.session_state.project_id )
+st.success(st.session_state.project_id)
 entity = syn.get(st.session_state.project_id)
 st.success(entity)
+
+#upload file
+# vizualize file
+# function to create file
+# function to look at file
